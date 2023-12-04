@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func Routes () {
+func Setup () {
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		tmpl := template.Must(template.ParseFiles("views/index.html"))
 		tmpl.Execute(w, nil)
